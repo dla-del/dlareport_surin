@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="สรุปความก้าวหน้าการพัฒนาระบบสารสนเทศของส่วนนิติการ" />
+  <title>สรุปความก้าวหน้าการพัฒนาระบบสารสนเทศ</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+      --primary:#2563eb;--primary2:#38bdf8;--dark:#111827;--dark2:#1f3a5f;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:"Sarabun","Noto Sans Thai",Arial,sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.7;
+    }
+    a{color:inherit}
+    .page{width:min(1180px,calc(100% - 32px));margin:40px auto}
+    .hero{
+      background:linear-gradient(135deg,var(--dark),var(--dark2));color:#fff;
+      border-radius:24px;padding:38px;margin-bottom:28px;
+      box-shadow:0 16px 40px rgba(15,23,42,.15)
+    }
+    .hero h1{margin:0 0 10px;font-size:clamp(28px,4vw,44px);line-height:1.25}
+    .hero p{margin:0;max-width:820px;color:#dbeafe;font-size:16px}
+    .summary-grid{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:28px
+    }
+    .summary-card,.system-card{
+      background:var(--card);border:1px solid var(--line);
+      box-shadow:0 8px 28px rgba(15,23,42,.08)
+    }
+    .summary-card{border-radius:18px;padding:20px}
+    .summary-card .label{color:var(--muted);font-size:14px;margin-bottom:6px}
+    .summary-card .value{font-size:30px;font-weight:700;color:#0f172a}
+    .systems{display:grid;gap:22px}
+    .system-card{border-radius:22px;padding:26px;box-shadow:0 10px 30px rgba(15,23,42,.07)}
+    .system-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .system-title h2{margin:0;font-size:22px;color:var(--dark)}
+    .system-title p{margin:4px 0 0;color:var(--muted);font-size:14px}
+    .percent{
+      flex:0 0 auto;min-width:88px;text-align:center;padding:10px 14px;border-radius:999px;
+      font-weight:700;background:#e0f2fe;color:#075985
+    }
+    .progress{width:100%;height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin-bottom:18px}
+    .progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--primary),var(--primary2))}
+    .detail{margin:0;color:#374151}
+    .link-box{margin-top:18px;padding:14px 16px;background:#f8fafc;border:1px solid #dbeafe;border-radius:14px;word-break:break-word}
+    .link-box strong{display:block;margin-bottom:4px;color:#0f172a}
+    .link-box a{color:var(--primary);text-decoration:none;font-weight:600}
+    .link-box a:hover{text-decoration:underline}
+    .subsection{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+    .subsection h3{margin:0 0 14px;font-size:17px;color:var(--dark)}
+    .subtask{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}
+    .subtask:last-child{border-bottom:0}
+    .subtask-title{font-weight:600;color:#374151}
+    .subtask-note{margin-top:2px;color:var(--muted);font-size:14px}
+    .mini-percent{font-weight:700;color:#1d4ed8;background:#eff6ff;padding:6px 10px;border-radius:999px;white-space:nowrap}
+    .status-text{font-weight:700;color:#7c3aed;background:#f3e8ff;padding:6px 10px;border-radius:999px;white-space:nowrap}
+    .note{margin-top:28px;background:#fff7ed;border:1px solid #fed7aa;border-radius:18px;padding:22px;color:#7c2d12}
+    .note strong{display:block;margin-bottom:8px;color:#9a3412;font-size:17px}
+    .footer{text-align:center;color:#9ca3af;font-size:13px;margin:26px 0 10px}
+    @media(max-width:900px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){
+      .page{width:min(100% - 20px,1180px);margin:20px auto}
+      .hero,.system-card{padding:20px;border-radius:18px}
+      .summary-grid{grid-template-columns:1fr}
+      .system-head{flex-direction:column}
+      .subtask{grid-template-columns:1fr}
+      .mini-percent,.status-text{width:fit-content}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>สรุปความก้าวหน้าการพัฒนาระบบสารสนเทศ</h1>
+      <p>ภาพรวมการพัฒนาและปรับปรุงระบบสารสนเทศเพื่อสนับสนุนการปฏิบัติงาน โดยแสดงสถานะความคืบหน้าของแต่ละระบบให้สามารถติดตามได้อย่างชัดเจนและเข้าใจง่าย</p>
+    </section>
+
+    <section class="summary-grid" aria-label="ภาพรวมความก้าวหน้า">
+      <div class="summary-card"><div class="label">e-Tracking</div><div class="value">85%</div></div>
+      <div class="summary-card"><div class="label">IVT System</div><div class="value">60%</div></div>
+      <div class="summary-card"><div class="label">LMS System</div><div class="value">60%</div></div>
+      <div class="summary-card"><div class="label">ICT System</div><div class="value">10%</div></div>
+    </section>
+
+    <section class="systems">
+      <article class="system-card">
+        <div class="system-head">
+          <div class="system-title"><h2>1. ระบบติดตามงาน e-Tracking</h2><p>New Version</p></div>
+          <div class="percent">85%</div>
+        </div>
+        <div class="progress" aria-label="ความก้าวหน้า 85 เปอร์เซ็นต์"><span style="width:85%"></span></div>
+        <p class="detail">อยู่ระหว่างการพัฒนาระบบติดตามงานเวอร์ชันใหม่ เพื่อเพิ่มประสิทธิภาพในการติดตามสถานะงาน การบริหารจัดการข้อมูล และรองรับกระบวนการปฏิบัติงานภายในหน่วยงานให้มีความสะดวก รวดเร็ว และเป็นระบบมากยิ่งขึ้น</p>
+      </article>
+
+      <article class="system-card">
+        <div class="system-head">
+          <div class="system-title"><h2>2. ระบบงานสอบสวน</h2><p>IVT System</p></div>
+          <div class="percent">60%</div>
+        </div>
+        <div class="progress" aria-label="ความก้าวหน้า 60 เปอร์เซ็นต์"><span style="width:60%"></span></div>
+        <p class="detail">ระบบสำหรับสนับสนุนการบริหารจัดการข้อมูลงานสอบสวน โดยปัจจุบันอยู่ระหว่างการพัฒนาฟังก์ชันหลักและระบบย่อยเพิ่มเติมให้ครอบคลุมการปฏิบัติงานมากยิ่งขึ้น</p>
+        <div class="link-box">
+          <strong>ผลงานปัจจุบัน</strong>
+          <a href="https://ivt-wu.vercel.app" target="_blank" rel="noopener noreferrer">https://ivt-wu.vercel.app</a>
+        </div>
+        <div class="subsection">
+          <h3>ระบบย่อยที่กำลังพัฒนาเพิ่มเติม</h3>
+          <div class="subtask">
+            <div><div class="subtask-title">ระบบดึงข้อมูลปีงบประมาณย้อนหลัง</div><div class="subtask-note">รองรับข้อมูลตั้งแต่ปีงบประมาณ พ.ศ. 2566 ถึงปัจจุบัน</div></div>
+            <div class="mini-percent">40%</div>
+          </div>
+          <div class="subtask">
+            <div><div class="subtask-title">ระบบบันทึกรายชื่อผู้ที่อยู่ระหว่างการสอบสวน</div><div class="subtask-note">เพื่อจัดเก็บและบริหารจัดการข้อมูลผู้เกี่ยวข้องอย่างเป็นระบบ</div></div>
+            <div class="mini-percent">30%</div>
+          </div>
+          <div class="subtask">
+            <div><div class="subtask-title">ระบบ Login แบบ Sign-in Provider</div><div class="subtask-note">รองรับการเข้าสู่ระบบผ่านผู้ให้บริการภายนอก</div></div>
+            <div class="status-text">กำลังพัฒนา</div>
+          </div>
+          <div class="subtask">
+            <div><div class="subtask-title">การจัดเตรียมระบบและฐานข้อมูลสำรอง</div><div class="subtask-note">เพื่อเพิ่มความต่อเนื่องและความปลอดภัยของข้อมูล</div></div>
+            <div class="mini-percent">30%</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="system-card">
+        <div class="system-head">
+          <div class="system-title"><h2>3. ระบบงานคดี</h2><p>LMS System</p></div>
+          <div class="percent">60%</div>
+        </div>
+        <div class="progress" aria-label="ความก้าวหน้า 60 เปอร์เซ็นต์"><span style="width:60%"></span></div>
+        <p class="detail">อยู่ระหว่างการพัฒนาและปรับปรุงระบบเพื่อรองรับการบริหารจัดการข้อมูลงานคดี การติดตามสถานะ และการจัดเก็บข้อมูลที่เกี่ยวข้องอย่างเป็นระบบ เพื่อช่วยลดขั้นตอนและเพิ่มประสิทธิภาพในการปฏิบัติงาน</p>
+        <div class="link-box">
+          <strong>ผลงานปัจจุบัน</strong>
+          <a href="https://lms-wu.vercel.app/" target="_blank" rel="noopener noreferrer">https://lms-wu.vercel.app/</a>
+        </div>
+      </article>
+
+      <article class="system-card">
+        <div class="system-head">
+          <div class="system-title"><h2>4. ระบบงานนิติกรรมสัญญา</h2><p>ICT System</p></div>
+          <div class="percent">10%</div>
+        </div>
+        <div class="progress" aria-label="ความก้าวหน้า 10 เปอร์เซ็นต์"><span style="width:10%"></span></div>
+        <p class="detail">ปัจจุบันอยู่ในขั้นตอนการวิเคราะห์และออกแบบโครงสร้างข้อมูล รวมถึงกำหนดแนวทางการพัฒนาระบบให้สามารถรองรับกระบวนการปฏิบัติงานด้านนิติกรรมสัญญาได้อย่างเหมาะสม</p>
+        <div class="link-box"><strong>สถานะปัจจุบัน</strong>ยังคงใช้ระบบฐานข้อมูลเดิมผ่าน Google Sheets เพื่อรองรับการปฏิบัติงานระหว่างการพัฒนาระบบใหม่</div>
+      </article>
+    </section>
+
+    <section class="note">
+      <strong>หมายเหตุ</strong>
+      แผนและระยะเวลาการพัฒนาระบบอาจมีการปรับเปลี่ยนตามสถานการณ์และความเหมาะสม เนื่องจากปัจจัยต่าง ๆ เช่น ข้อจำกัดด้านงบประมาณ ทรัพยากรที่เกี่ยวข้อง ตลอดจนการเปลี่ยนแปลงหรือเพิ่มเติมข้อกำหนดความต้องการของระบบ (Requirements) เพื่อให้ระบบที่พัฒนาขึ้นสามารถตอบสนองต่อการใช้งานจริงและกระบวนการปฏิบัติงานของหน่วยงานได้อย่างมีประสิทธิภาพ
+    </section>
+
+    <div class="footer">สรุปความก้าวหน้าการพัฒนาระบบสารสนเทศ</div>
+  </main>
+</body>
+</html>
